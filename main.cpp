@@ -19,7 +19,7 @@ static bool checkWhiteSpaces(const std::string& source)
     default:
         ret |= source.find("\t\n") != std::string::npos;
         ret |= source.find(" \n") != std::string::npos;
-        ret |= *(source.crbegin() + 1ul) != '\n';
+        ret |= *(source.crbegin() + 1ul) == '\n';
         //fallthrough
     case 1ul:
         ret |= *source.crbegin() != '\n';
